@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>株式会社バインドキューブ | BIND CUBE Co., Ltd.</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- 👇 この位置に追加！ -->
+  <script>
+    const password = prompt("パスワードを入力してください:");
+    if (password !== "bindcube0000") {
+      document.write("アクセス拒否");
+    }
+  </script>
 </head>
 <body>
  
@@ -187,13 +195,5 @@
       }, 4000);
     });
   </script>
-
-<script>
-  const password = prompt("パスワードを入力してください:");
-  if (password !== "bindcube0000") {
-    document.body.innerHTML = "アクセス拒否";
-  }
-  </script>  
-  
 </body>
 </html>
