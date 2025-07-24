@@ -1,0 +1,235 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #f39c12; /* アクセントのオレンジ */
+  --gray: #333;
+  --bg-white: #fff;
+  --bg-light: #f9f9f9;
+  --border-radius: 12px;
+  --text-light: #777;
+}
+
+body {
+  font-family: 'Helvetica Neue', 'Rounded Mplus 1c', sans-serif;
+  background: var(--bg-white);
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--gray);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: var(--border-radius);
+  padding: 0.3rem 0.6rem;
+}
+
+a:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+/* Video section */
+.video-screen, .main-content {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.video-screen {
+  background: #000;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+}
+.main-content {
+  display: none;
+  z-index: 1;
+  position: static;
+}
+
+.fade-black {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: black;
+  animation: fadeIn 2s forwards;
+  z-index: 20;
+}
+
+.fade-white {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: white;
+  opacity: 0;
+  z-index: 21;
+  transition: opacity 2s ease;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--bg-white);
+  border-bottom: 1px solid #ccc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+header img {
+  height: 50px;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+}
+
+/* Push content below fixed header */
+body::before {
+  content: "";
+  display: block;
+  height: 80px; /* headerの高さと一致 */
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-white);
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 80px;
+  z-index: 999;
+}
+
+nav a {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Hero image */
+.hero {
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin: 2rem;
+}
+
+/* Section content */
+.section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--bg-light);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.section p, .section li {
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.8;
+  color: var(--gray);
+}
+
+.section ul {
+  margin-left: 1.5rem;
+  list-style-type: disc;
+}
+
+/* Access section */
+.access-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.access-img img {
+  width: 300px;
+  max-width: 100%;
+  border: 2px solid var(--main-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.access-text {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+}
+
+.access-text h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--main-color);
+}
+
+.access-text p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--gray);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f1f1f1;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  border-top: 1px solid #ccc;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+/* Buttons (if needed) */
+button, input[type="submit"], a.button {
+  background: var(--main-color);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover, input[type="submit"]:hover, a.button:hover {
+  background: #e67e22;
+}

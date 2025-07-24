@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>株式会社バインドキューブ | BIND CUBE Co., Ltd.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <img src="image/logo_BINDCUBE.png" alt="株式会社バインドキューブ ロゴ" />
+  </header>
+
+  <nav>
+    <a href="index.html#about">会社概要 / About</a>
+    <a href="index.html#access">アクセス / Access</a>
+    <a href="works.html">開発実績 / Works</a>
+    <a href="recruit.html">求人情報 / Recruit</a>
+    <a href="mailto:info@bindcube.jp?subject=お問い合わせ&body=以下にご用件をご記入ください。">お問い合わせ / Contact</a>
+    <a href="fortuneslip.html">御神籤</a>
+  </nav>
+
+ <!-- 中略（header, navは前回と同じ） -->
+
+<section class="section">
+  <h2>開発実績 / Works</h2>
+
+  <h3>■ 東京DCスタジオについて / Tokyo DC Studio</h3>
+  <p>
+    東京DCスタジオは、OptiTrack製モーションキャプチャ機材を完備した最新鋭の収録スタジオです。<br>
+    キャラクターアニメーション制作やVTuber収録、ライブイベント用の映像制作など、さまざまなプロジェクトを支える技術環境を提供しています。
+  </p>
+
+  <div class="gallery">
+    <img src="image/studio1.jpg" alt="スタジオ写真1" />
+    <img src="image/studio2.jpg" alt="スタジオ写真2" />
+    <img src="image/studio3.jpg" alt="スタジオ写真3" />
+    <img src="image/studio4.jpg" alt="スタジオ写真4" />
+  </div>
+
+  <h4>◆ スタジオ概要</h4>
+  <ul>
+    <li><strong>撮影エリア：</strong>3.5m × 3.5m</li>
+    <li><strong>同時収録可能人数：</strong>最大2名</li>
+    <li><strong>主な用途：</strong>モーションキャプチャ収録／アニマティクス制作／ライブ配信支援／VTuber収録・表情トラッキング など</li>
+  </ul>
+
+  <h4>◆ 機材一覧</h4>
+  <ul>
+    <li><strong>モーションキャプチャカメラ：</strong>OptiTrack PrimeX13W × 8台、PrimeX22 × 4台</li>
+    <li><strong>手指トラッキンググローブ：</strong>OptiTrack × MANUS Quantum（2セット）</li>
+    <li><strong>プレビューモニター：</strong>75インチ ×2、可動式50インチ ×1、可動式24インチ ×1</li>
+    <li><strong>その他設備：</strong>バーチャルカメラ、三脚、階段、クッションなど各種小道具</li>
+  </ul>
+
+  <h4>◆ スタジオの特長</h4>
+  <p>
+    バーチャルカメラを活用したアニマティクス撮影にも対応。アクターの演技をリアルタイムで確認しながら、カメラワークの検討・演出設計が可能です。高精度なモーションと表情トラッキングにより、次世代のリアルタイム映像制作を支援します。
+  </p>
+
+  <div class="gallery">
+    <img src="image/vtuber1.jpg" alt="Vチューバー技術1" />
+    <img src="image/vtuber2.jpg" alt="Vチューバー技術2" />
+    <img src="image/vtuber3.jpg" alt="Vチューバー技術3" />
+  </div>
+
+
+  <h3>■ 主な開発実績 / Project History</h3>
+  <ul>
+    <li><strong>2019年：</strong>次世代ロボットトイ専用コンテンツ制作②</li>
+    <li><strong>2018年：</strong>次世代ロボットトイ専用コンテンツ制作①</li>
+    <li><strong>2017年：</strong>『蒼焔の艦隊』3D映像制作およびゲーム内映像データ制作協力</li>
+    <li><strong>2016年以前：</strong>
+      <ul>
+        <li>スマートフォンゲーム 映像制作協力（7件）</li>
+        <li>スマートフォンゲーム 開発協力（1件）</li>
+        <li>スマートフォンゲーム 自社開発（6件）</li>
+        <li>パチンコ映像制作協力（4件）</li>
+        <li>パチンコ映像制作（1件）</li>
+        <li>パチスロ映像制作協力（7件）</li>
+        <li>パチスロ映像制作（1件）</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<footer>
+  &copy; 2025 株式会社バインドキューブ / BIND CUBE Co., Ltd.
+</footer>
+
+<!-- ギャラリー用CSS追加（<style>内に記載） -->
+<style>
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.gallery img {
+  width: calc(25% - 1rem);
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .gallery img {
+    width: calc(50% - 1rem);
+  }
+}
+</style>
